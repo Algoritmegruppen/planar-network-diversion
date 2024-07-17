@@ -1,9 +1,8 @@
 use crate::structure::graph::edge::Edge;
 use crate::structure::graph::planar_edge::PrePlanarEdge;
 use crate::structure::weight::Weight;
-use num::Complex;
 use std::cmp::Ordering::{self, Equal};
-use std::ops::{Add, Neg, Sub};
+use std::ops::{Add, Sub};
 
 #[derive(PartialEq, Clone, Copy)]
 pub struct Point {
@@ -15,11 +14,8 @@ impl Point {
     pub const fn new(x: f64, y: f64) -> Self {
         Point { x, y }
     }
-    pub fn cross(&self, other: &Self) -> f64 {
-        self.x * other.y - self.y * other.x
-    }
     fn angle(&self) -> f64 {
-        Complex::new(self.x, self.y).to_polar().1.neg()
+        self.y.atan2(self.x)
     }
 }
 
