@@ -47,5 +47,4 @@ fn main() {
         let secs = start_time.elapsed().as_secs_f64();
         println!("{:.3} s: WARN: No cut found", secs);
     }
-
 }

@@ -2,7 +2,7 @@ use crate::structure::graph::edge::Edge;
 use crate::structure::graph::point::Point;
 use crate::structure::weight::{Weight, Weighted};
 use std::cmp::Ordering::{self, Equal};
-use std::fmt::{Debug, Formatter, Display};
+use std::fmt::{Debug, Display, Formatter};
 use std::str::FromStr;
 
 #[derive(PartialEq, Clone)]

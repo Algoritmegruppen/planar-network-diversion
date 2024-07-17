@@ -10,7 +10,6 @@ use crate::utility::misc::{debug, repeat};
 use std::cmp::Reverse;
 use std::collections::BinaryHeap;
 
-
 pub struct DerigsAlgorithm<W: Weight, E: Edge<W>> {
     graph: UndirectedGraph<W, E>,
     d_plus: Vec<Cost<W>>,
